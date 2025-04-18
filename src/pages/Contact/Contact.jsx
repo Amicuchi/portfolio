@@ -50,7 +50,7 @@ const Contact = () => {
             <form
               ref={formRef}
               className={styles.form}
-              action="https://formspree.io/f/xaneaweg"
+              action={`https://formspree.io/f/${import.meta.env.VITE_FORMSPREE_KEY}`}
               method="POST"
               onSubmit={handleSubmit}
             >
