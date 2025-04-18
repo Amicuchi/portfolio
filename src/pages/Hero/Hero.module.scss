@@ -1,0 +1,85 @@
+@use "../../styles/variables" as var;
+
+.heroSection {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    to right,
+    var.$color-primary,
+    var.$color-secondary
+  );
+  color: var.$color-white;
+  padding-top: 8rem;
+  padding-bottom: 6rem;
+
+  @media (min-width: 768px) {
+    padding-top: 6rem;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.greeting {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.name {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.role {
+  font-size: var.$font-title-size;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.description {
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+
+  @media (min-width: 768px) {
+    font-size: 1.25rem;
+  }
+}
+
+.primaryButton {
+  background-color: var.$color-secondary;
+  color: var.$color-primary;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s;
+  border: 2px solid var.$color-secondary;
+
+  &:hover {
+    background-color: var(--color-accent);
+    color: var.$color-white;
+    border: 2px solid var.$color-white;
+  }
+}
+
+.secondaryButton {
+  border: 2px solid var.$color-white;
+  color: var.$color-white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s;
+
+  &:hover {
+    background-color: var.$color-white;
+    color: var.$color-primary;
+  }
+}
