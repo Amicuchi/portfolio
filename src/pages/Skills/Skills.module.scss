@@ -1,0 +1,81 @@
+  @use "../../styles/_variables" as var;
+
+  .skillsSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: var.$section-padding;
+    padding-bottom: var.$section-padding;
+    background-color: var.$color-primary;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  .skillsTitle {
+    font-size: 1.375rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .title {
+    color: var.$color-background;
+    font-size: var.$font-title-size;
+    font-weight: var.$font-title-weight;
+    margin-bottom: 0.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+    color: var.$color-background;
+    max-width: 700px;
+    margin: 0 auto 1.5rem;
+    line-height: 1.6;
+  }
+
+  .divider {
+    height: 0.25rem;
+    width: 4rem;
+    background: var.$color-background;
+    margin: 0 auto 2rem;
+    border-radius: 2px;
+  }
+
+  .categoryContainer {
+    margin-bottom: 4rem;
+  }
+
+  .categoryTitle {
+    font-size: 1.8rem;
+    color: var.$color-background;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-left: 1rem;
+  }
+
+  .grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .skillItem {
+    border-radius: 0.7rem;
+    background-color: var.$color-background;
+    transition: transform 0.3s ease;
+    margin-bottom: 1rem;
+
+    &:hover {
+    transform: translateY(-7px);
+  }
+}

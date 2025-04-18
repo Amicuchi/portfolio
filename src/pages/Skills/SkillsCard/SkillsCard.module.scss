@@ -1,0 +1,81 @@
+@use "../../../styles/_variables" as var;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  background-color: var.$color-white;
+  transition: all 0.3s ease;
+  border-radius: 0.7rem;
+  padding: 0.5rem;
+  height: 140px;
+  width: 120px;
+}
+
+.cardImageContainer {
+  align-items: center;
+  padding: 0;
+  height: 80px;
+}
+
+.cardImage {
+  width: 90%;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(20%);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+    filter: grayscale(0%);
+  }
+}
+
+.cardContent {
+  height: auto;
+  text-align: center;
+  background-color: transparent;
+}
+
+.cardTitle {
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-align: center;
+  color: var.$color-primary;
+  margin-bottom: 0;
+  transition: color 0.3s ease;
+}
+
+/* === Media Queries === */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .card {
+    height: 120px;
+    width: 100px;
+    padding: 0.4rem;
+  }
+  .cardImageContainer {
+    height: 70px;
+  }
+  .cardTitle {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .card {
+    height: 100px;
+    width: 85px;
+    padding: 0.3rem;
+  }
+  .cardImageContainer {
+    height: 60px;
+  }
+  .cardTitle {
+    font-size: 0.85rem;
+  }
+}
