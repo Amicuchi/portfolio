@@ -1,6 +1,12 @@
 # Anderson Amicuchi | Portfólio de Desenvolvimento Web
 
-Olá! Bem-vindo ao repositório do meu portfólio pessoal. Este projeto foi desenvolvido para apresentar minhas habilidades, experiências e projetos como Desenvolvedor Full Stack, com foco na stack MERN.
+Olá! Bem-vindo ao repositório do meu portfólio pessoal. 
+
+Este projeto foi desenvolvido para apresentar minhas habilidades, experiências e projetos como Desenvolvedor Full Stack, com foco na stack MERN.
+
+Link do site: [andersonamicuchi.netlify.app/](https://andersonamicuchi.netlify.app/)
+
+Link do vídeo de apresentação: [Anderson Amicuchi | Portfolio](https://youtu.be/f9dhliAMlqQ)
 
 **Página Inicial**
 
