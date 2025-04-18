@@ -1,0 +1,130 @@
+@use "../../styles/variables" as var;
+
+.servicesSection {
+  min-height: 90svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: var.$section-padding;
+  padding-bottom: var.$section-padding;
+  background-color: var.$color-primary;
+}
+
+.container {
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.marginBottom12 {
+  margin-bottom: 3rem;
+}
+
+.title {
+  font-size: var.$font-title-size;
+  font-weight: var.$font-title-weight;
+  margin-bottom: 0.5rem;
+  color: var.$color-white;
+}
+
+.subtitle {
+  color: var.$color-white;
+}
+
+.divider {
+  width: 4rem;
+  height: 0.25rem;
+  background-color: var.$color-secondary;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+.serviceIconContainer {
+  background-color: var.$color-secondary;
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.25rem;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve no ícone */
+}
+
+.serviceIcon {
+  width: 2rem;
+  height: 2rem;
+  color: var.$color-primary;
+}
+
+.serviceTitle {
+  font-size: 1.375rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.serviceDescription {
+  color: var.$color-text;
+  text-align: center;
+  line-height: 1.8;
+}
+
+/* === Media Queries === */
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 461px) and (max-width: 767px) {
+  .grid {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (max-width: 460px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .title {
+    font-size: var.$font-title-size-small;
+  }
+  .subtitle {
+    font-size: 0.9rem;
+  }
+  .serviceTitle {
+    font-size: 1.2rem;
+  }
+}
