@@ -1,0 +1,53 @@
+@use "../../styles/variables" as var;
+
+.languageSwitcher {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.languageButton {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid var.$color-primary;
+  color: var.$color-primary;
+  transition: background-color 0.3s ease;
+
+  &.scrolled {
+    border: 1px solid var.$color-secondary;
+    color: var.$color-secondary;
+  }
+
+  &:hover {
+    background-color: var.$color-secondary;
+    color: var.$color-primary;
+  }
+
+  &.active {
+    background-color: var.$color-background;
+    color: var.$color-text;
+  }
+}
+
+@media (max-width: 500px) {
+  .languageSwitcher {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    background-color: transparent;
+    border: 1px solid var.$color-secondary;
+    transition: background-color 0.3s ease;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    box-shadow: 0 3px 24px rgba(255, 255, 255, 0.5);
+    z-index: 25;
+  }
+
+  .languageButton {
+    border: 1px solid var.$color-secondary;
+    color: var.$color-secondary;
+  }
+}

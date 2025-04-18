@@ -1,0 +1,190 @@
+@use "../../styles/variables" as var;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: all 0.3s ease;
+  padding: 1rem;
+  background-color: transparent;
+  z-index: 20;
+
+  &.scrolled {
+    background-color: var.$color-primary;
+    color: var.$color-white;
+    box-shadow: 0 3px 24px rgba(0, 0, 0, 0.5);
+    border-bottom: 1px solid var.$color-secondary;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: transparent !important;
+  fill: transparent;
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    transition: color 0.3s ease, opacity 0.3s ease;
+    opacity: 1;
+
+    &.scrolled {
+      color: var.$color-white;
+    }
+
+    .logoIcon {
+      height: 2rem;
+      width: auto;
+      margin-right: 0.5rem;
+      vertical-align: middle;
+      transition: fill 0.3s ease;
+
+      &.scrolled {
+        color: var.$color-white;
+      }
+    }
+  }
+}
+
+.desktopNav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.mobileNav {
+  display: none;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  padding-bottom: 3rem;
+  z-index: 12;
+}
+
+/* Overlay com Blur para o Mobile Menu */
+.menuOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(20px);
+  z-index: 11;
+}
+
+.navLink {
+  color: var.$color-white;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: var.$color-secondary;
+  }
+}
+
+.menuButton {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.3rem;
+  width: 2rem;
+  height: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var.$color-white;
+  z-index: 21;
+
+  span {
+    height: 2px;
+    width: 100%;
+    background-color: var.$color-white;
+    transition: all 0.3s ease;
+  }
+
+  &.open span:nth-child(1) {
+    transform: rotate(45deg) translate(4px, 4px);
+  }
+
+  &.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  &.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(4px, -4px);
+  }
+}
+
+/* === Media Queries === */
+
+@media (max-width: 949px) {
+  .desktopNav {
+    display: none;
+  }
+  .mobileNav {
+    display: flex;
+  }
+  .menuButton {
+    display: flex;
+  }
+  .logoContainer .logo {
+    font-size: 1.5rem;
+  }
+  .headerActions {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    gap: 2rem;
+  }
+  .overlayLanguageSwitcher {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .headerActions {
+    gap: 1rem;
+
+    .mobileLanguageSwitcher {
+      display: none;
+    }
+  }
+  .overlayLanguageSwitcher {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    height: 4rem;
+    z-index: 15;
+  }
+}

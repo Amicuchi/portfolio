@@ -1,0 +1,17 @@
+@use '../../../styles/variables' as *;
+
+.logoIcon {
+  height: 2rem;
+  transition: fill 0.3s ease;
+
+  .svgPath {
+    fill: transparent;
+    transition: fill 0.3s ease;
+  }
+}
+
+.scrolled {
+  .svgPath {
+    fill: white;
+  }
+}
