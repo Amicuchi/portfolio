@@ -8,7 +8,7 @@ Olá! Bem-vindo ao repositório do meu portfólio pessoal. Este projeto foi dese
 
 ## ✨ Demonstração e Acesso ao Site
 
-* **Site Online:** Você pode visitar e explorar o portfólio ativo em: [https://suaurlcompleta.com](https://suaurlcompleta.com)
+* **Site Online:** Você pode visitar e explorar o portfólio ativo em: [https://andersonamicuchi.netlify.app/](https://andersonamicuchi.netlify.app/)
 
 * **Screenshots/Preview Visual:** Veja como algumas seções do site se parecem:
 
@@ -49,26 +49,17 @@ Olá! Bem-vindo ao repositório do meu portfólio pessoal. Este projeto foi dese
 Este projeto foi construído utilizando as seguintes tecnologias e ferramentas:
 
 * **Frontend:**
-    * ![React](https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=white&style=flat-square)
-    * ![SCSS](https://img.shields.io/badge/-SCSS-CC6699?logo=sass&logoColor=white&style=flat-square)
-    * ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?logo=javascript&logoColor=white&style=flat-square)
-    * ![HTML5](https://img.shields.io/badge/-HTML5-E34F26?logo=html5&logoColor=white&style=flat-square)
-    * ![CSS3](https://img.shields.io/badge/-CSS3-1572B6?logo=css3&logoColor=white&style=flat-square)
-    * (Mencione outras libs de frontend como react-router-dom, react-icons, etc.)
 
-* **Backend:** (Mencione se você tiver um backend ativo para o formulário ou outras partes)
-    * ![Node.js](https://img.shields.io/badge/-Node.js-339933?logo=node.js&logoColor=white&style=flat-square)
-    * ![Express.js](https://img.shields.io/badge/-Express.js-000000?logo=express&logoColor=white&style=flat-square)
-
-* **Banco de Dados:** (Mencione se aplicável, mesmo que apenas para o formulário de contato)
-    * ![MongoDB](https://img.shields.io/badge/-MongoDB-47A248?logo=mongodb&logoColor=white&style=flat-square)
+![React](https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=white&style=flat-square)
+![SCSS](https://img.shields.io/badge/-SCSS-CC6699?logo=sass&logoColor=white&style=flat-square)
 
 * **Ferramentas e Outros:**
-    * ![Vite](https://img.shields.io/badge/-Vite-646CFF?logo=vite&logoColor=white&style=flat-square)
-    * ![Git](https://img.shields.io/badge/-Git-F05032?logo=git&logoColor=white&style=flat-square)
-    * ![GitHub](https://img.shields.io/badge/-GitHub-181717?logo=github&logoColor=white&style=flat-square)
-    * ![VS Code](https://img.shields.io/badge/-VS%20Code-007ACC?logo=visual-studio-code&logoColor=white&style=flat-square)
-    * ![Figma](https://img.shields.io/badge/-Figma-F24E1E?logo=figma&logoColor=white&style=flat-square)
+
+![Figma](https://img.shields.io/badge/-Figma-F24E1E?logo=figma&logoColor=white&style=flat-square)
+![VS Code](https://img.shields.io/badge/-VS%20Code-007ACC?logo=visual-studio-code&logoColor=white&style=flat-square)
+![Vite](https://img.shields.io/badge/-Vite-646CFF?logo=vite&logoColor=white&style=flat-square)
+![Git](https://img.shields.io/badge/-Git-F05032?logo=git&logoColor=white&style=flat-square)
+![GitHub](https://img.shields.io/badge/-GitHub-181717?logo=github&logoColor=white&style=flat-square)
 
 ## ⚙️ Instalação e Configuração Local
 
@@ -86,20 +77,22 @@ Certifique-se de ter o Node.js e o npm (ou Yarn) instalados na sua máquina.
 1.  Clone o repositório:
 
     ```bash
-    git clone [https://github.com/Amicuchi/portfolio.git](https://github.com/Amicuchi/portfolio.git)
+    git clone https://github.com/Amicuchi/portfolio.git
     ```
 
 2.  Navegue até o diretório do projeto:
 
     ```bash
-    cd seu-nome-do-repositorio
+    cd portfolio
     ```
 
 3.  Instale as dependências:
 
     ```bash
     npm install
+
     # ou
+    
     yarn install
     ```
 
@@ -108,8 +101,7 @@ Certifique-se de ter o Node.js e o npm (ou Yarn) instalados na sua máquina.
     * Crie um arquivo chamado `.env` na pasta raiz do projeto.
     * Adicione suas variáveis de ambiente. Por exemplo, para Formspree:
         ```env
-        REACT_APP_FORMSPREE_KEY=sua_chave_publica_do_formspree
-        # Adicione outras variáveis se necessário
+        VITE_FORMSPREE_KEY=sua_chave_publica_do_formspree
         ```
     * **Importante:** O arquivo `.env` já deve estar listado no `.gitignore` para não ser commitado!
 
@@ -121,7 +113,7 @@ Certifique-se de ter o Node.js e o npm (ou Yarn) instalados na sua máquina.
     yarn start
     # (ou outro comando se você usar Vite, Next.js, etc. Ex: npm run dev)
     ```
-O aplicativo deverá abrir no seu navegador em `http://localhost:5173` (ou outra porta).
+O aplicativo deverá abrir no seu navegador em `http://localhost:5173`.
 
 ## 🏃 Utilização
 
@@ -150,5 +142,3 @@ Este projeto está sob a Licença MIT.
 * **GitHub:** [https://github.com/Amicuchi](https://github.com/Amicuchi)
 * **Email:** AndersonAmicuchi@gmail.com
 * **Website:** [https://AndersonAmicuchi.com](https://AndersonAmicuchi.com)
-
----
