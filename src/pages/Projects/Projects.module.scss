@@ -1,0 +1,76 @@
+@use "../../styles/variables" as var;
+
+.projectsSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 4rem 1rem;
+  background-color: var.$color-background;
+}
+
+.title {
+  font-size: var.$font-title-size;
+  font-weight: var.$font-title-weight;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.subtitle {
+  color: var.$color-text;
+  text-align: center;
+}
+
+.divider {
+  width: 4rem;
+  height: 0.25rem;
+  background-color: var.$color-primary;
+  margin: 1rem auto;
+}
+
+/* === Media Queries === */
+
+@media (min-width: 1024px) {
+  .projectsSection {
+    padding: 6rem 2rem; /* Ajustando o padding para telas maiores */
+  }
+  .title {
+    font-size: 2.5rem; /* Ajustando o tamanho da fonte do título */
+  }
+  .subtitle {
+    font-size: 1.1rem; /* Ajustando o tamanho da fonte da legenda */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .projectsSection {
+    padding: 5rem 1.5rem; /* Ajustando o padding para tablets */
+  }
+  .title {
+    font-size: 2.2rem; /* Ajustando o tamanho da fonte do título */
+  }
+}
+
+@media (min-width: 461px) and (max-width: 767px) {
+  .projectsSection {
+    padding: 4rem 1rem; /* Mantendo o padding para celulares maiores (landscape) */
+  }
+  .title {
+    font-size: 2rem; /* Ajustando o tamanho da fonte do título */
+  }
+}
+
+@media (max-width: 460px) {
+  .projectsSection {
+    padding: 3rem 1rem; /* Ajustando o padding para celulares menores */
+  }
+  .title {
+    font-size: 1.8rem; /* Ajustando o tamanho da fonte do título */
+  }
+  .subtitle {
+    font-size: 0.95rem; /* Ajustando o tamanho da fonte da legenda */
+  }
+}

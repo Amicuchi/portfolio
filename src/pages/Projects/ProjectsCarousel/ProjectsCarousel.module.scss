@@ -1,0 +1,217 @@
+@use "../../../styles/_variables" as var;
+
+.carouselContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.carouselViewport {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+}
+
+.cardWrapper {
+  position: absolute;
+  top: 0;
+  width: 350px;
+  // width: 300px;
+  height: 100%;
+  transition: all 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+  animation-delay: 0.1s;
+}
+
+.position0 {
+  transform: translateX(0);
+  opacity: 1;
+  z-index: 5;
+}
+
+.positionMinus1 {
+  transform: translateX(-180px) scale(0.7);
+  z-index: 4;
+  opacity: 0.7;
+}
+
+.position1 {
+  transform: translateX(180px) scale(0.7);
+  z-index: 4;
+  opacity: 0.7;
+}
+
+.positionMinus2 {
+  transform: translateX(-360px) scale(0.6);
+  z-index: 3;
+  opacity: 0.4;
+}
+
+.position2 {
+  transform: translateX(360px) scale(0.6);
+  z-index: 3;
+  opacity: 0.4;
+}
+
+// Botões de Navegação
+.carouselButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid var.$color-primary;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  font-size: 24px;
+  font-weight: bold;
+  color: var.$color-primary;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  z-index: 10;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 1);
+    transform: translateY(-10%) scale(1.05);
+  }
+
+  &:focus {
+    outline: 2px solid var.$color-secondary;
+  }
+}
+
+.prev {
+  left: 1rem;
+}
+
+.next {
+  right: 1rem;
+}
+
+
+/* === Media Queries === */
+
+@media (min-width: 1024px) {
+  .carouselViewport {
+    height: 450px;
+  }
+  .cardWrapper {
+    width: 350px;
+  }
+  .positionMinus1 {
+    transform: translateX(-200px) scale(0.7);
+  }
+  .position1 {
+    transform: translateX(200px) scale(0.7);
+  }
+  .positionMinus2 {
+    transform: translateX(-400px) scale(0.6);
+  }
+  .position2 {
+    transform: translateX(400px) scale(0.6);
+  }
+  .carouselButton {
+    width: 50px;
+    height: 50px;
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .carouselViewport {
+    height: 400px; /* Ajustando a altura para tablets */
+  }
+  .cardWrapper {
+    width: 280px; /* Ajustando a largura dos cards */
+  }
+  .positionMinus1 {
+    transform: translateX(-150px) scale(0.8);
+  }
+  .position1 {
+    transform: translateX(150px) scale(0.8);
+  }
+  .positionMinus2 {
+    display: none; /* Ocultando o segundo card da esquerda */
+  }
+  .position2 {
+    display: none; /* Ocultando o segundo card da direita */
+  }
+  .carouselButton {
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 461px) and (max-width: 767px) {
+  .carouselViewport {
+    height: 350px; /* Ajustando a altura para celulares maiores (landscape) */
+  }
+  .cardWrapper {
+    width: 250px; /* Ajustando a largura dos cards */
+  }
+  .positionMinus1 {
+    transform: translateX(-130px) scale(0.85);
+  }
+  .position1 {
+    transform: translateX(130px) scale(0.85);
+  }
+  .positionMinus2 {
+    display: none;
+  }
+  .position2 {
+    display: none;
+  }
+  .carouselButton {
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 460px) {
+  .carouselViewport {
+    height: 350px; /* Ajustando a altura para celulares menores */
+  }
+  .cardWrapper {
+    width: 90%; /* Cards ocupando mais largura em mobile */
+  }
+  .positionMinus1 {
+    transform: translateX(-105%) scale(0.8); /* Ajustando a posição */
+    opacity: 0.5;
+  }
+  .position1 {
+    transform: translateX(105%) scale(0.8); /* Ajustando a posição */
+    opacity: 0.5;
+  }
+  .positionMinus2 {
+    display: none;
+  }
+  .position2 {
+    display: none;
+  }
+  .carouselButton {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+  }
+  .prev {
+    left: 0.5rem;
+  }
+  .next {
+    right: 0.5rem;
+  }
+}
