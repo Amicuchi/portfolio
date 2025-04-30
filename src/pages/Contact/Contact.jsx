@@ -168,7 +168,7 @@ const Contact = () => {
                   @Amicuchi
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <FaGlobe /> <strong>Website:</strong>{" "}
                 <a
                   href="https://andersonamicuchi.com"
@@ -177,7 +177,7 @@ const Contact = () => {
                 >
                   AndersonAmicuchi.com
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
