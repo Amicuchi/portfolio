@@ -14,7 +14,9 @@ import {
 
 const Contact = () => {
   const { texts } = useLanguage();
-  const [state, handleSubmit] = useForm("xaneaweg");
+  const [state, handleSubmit] = useForm(
+    `${import.meta.env.VITE_FORMSPREE_KEY}`
+  );
   const [showSuccess, setShowSuccess] = useState(false);
   const formRef = useRef(null);
 
@@ -29,7 +31,10 @@ const Contact = () => {
   }, [state.succeeded]);
 
   return (
-    <section id="contact" className={`${styles.contactContainer} ${styles.fadeIn}`}>
+    <section
+      id="contact"
+      className={`${styles.contactContainer} ${styles.fadeIn}`}
+    >
       <div className={styles.container}>
         <div className={styles.header}>
           <h2 className={styles.title}>{texts.contact.title}</h2>
@@ -38,7 +43,6 @@ const Contact = () => {
         </div>
 
         <div className={styles.contactGrid}>
-          
           {/* FORMULÁRIO */}
           <div className={styles.formWrapper}>
             {showSuccess && (
@@ -50,7 +54,9 @@ const Contact = () => {
             <form
               ref={formRef}
               className={styles.form}
-              action={`https://formspree.io/f/${import.meta.env.VITE_FORMSPREE_KEY}`}
+              action={`https://formspree.io/f/${
+                import.meta.env.VITE_FORMSPREE_KEY
+              }`}
               method="POST"
               onSubmit={handleSubmit}
             >
@@ -71,7 +77,7 @@ const Contact = () => {
                 placeholder={texts.contact.namePlaceholder}
                 className={styles.inputField}
               />
-              
+
               <input
                 id="email"
                 type="email"
@@ -89,7 +95,7 @@ const Contact = () => {
                 placeholder={texts.contact.subjectPlaceholder}
                 className={styles.inputField}
               />
-              
+
               <textarea
                 id="message"
                 name="message"
@@ -98,7 +104,7 @@ const Contact = () => {
                 rows={5}
                 className={styles.inputField}
               ></textarea>
-              
+
               {/* Erros multilíngues */}
               {state.errors &&
                 state.errors.map((error, index) => (
