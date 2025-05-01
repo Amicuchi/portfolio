@@ -11,6 +11,7 @@ import sgaImage from "../../../assets/img_projects/sga.png";
 import numerosDestinoImage from "../../../assets/img_projects/DestinyNumbers.png";
 import todoAppImage from "../../../assets/img_projects/ToDoList.png";
 import musicPlayerImage from "../../../assets/img_projects/MusicPlayer.png";
+import peterAmicuchiImage from "../../../assets/img_projects/PeterAmicuchi.png";
 
 const ProjectsCarousel = () => {
   const { language } = useLanguage();
@@ -25,6 +26,7 @@ const ProjectsCarousel = () => {
     "numeros-destino-image": numerosDestinoImage,
     "todo-app-image": todoAppImage,
     "music-player-image": musicPlayerImage,
+    "peter-amicuchi-image": peterAmicuchiImage,
   };
 
   const projects = t.projects.projectsList;

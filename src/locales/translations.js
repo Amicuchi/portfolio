@@ -124,6 +124,15 @@ const translations = {
           github: "https://github.com/Amicuchi/MusicPlayer",
           url: "https://andersonplayer.netlify.app/",
           description: "Um reprodutor de música minimalista com funcionalidades básicas."
+        },
+        {
+          id: 7,
+          title: "Peter Amicuchi Portfolio",
+          category: "React",
+          image: "peter-amicuchi-image",
+          github: "https://github.com/Amicuchi/portfolio-peter",
+          url: "https://peteramicuchi.netlify.app/",
+          description: "Uma Landing Page para psicanalista que mostra seu histórico, ambiente de atendimento, etc."
         }
       ]
     },
@@ -304,6 +313,15 @@ const translations = {
           github: "https://github.com/Amicuchi/MusicPlayer",
           url: "https://andersonplayer.netlify.app/",
           description: "A minimalist music player with basic features."
+        },
+        {
+          id: 7,
+          title: "Peter Amicuchi's Portfolio",
+          category: "React",
+          image: "peter-amicuchi-image",
+          github: "https://github.com/Amicuchi/portfolio-peter",
+          url: "https://peteramicuchi.netlify.app/",
+          description: "A Landing Page to psicanalist that shows his background, enviroment, etc.."
         }
       ]
     },
